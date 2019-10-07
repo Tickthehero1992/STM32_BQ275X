@@ -3,7 +3,7 @@
 
 #include "main.h"
 
-#define battery_capacity 0x6D6
+
 #define BQ275X_ADDRES 0XAA //(0X55<<1)
 
 typedef enum COMMAND
@@ -74,7 +74,7 @@ typedef  struct __attribute__((__packed__))
 	uint8_t DATA2;
 }MESSAGE_TO_BQ275X;
 
-uint8_t BQ275x_init(I2C_HandleTypeDef);
+uint8_t BQ275x_init(I2C_HandleTypeDef,uint16_t battery_capacity);
 uint16_t BQ275x_status_read(I2C_HandleTypeDef ,CNTRL_BQ275X);
 uint16_t BQ275x_data_information(I2C_HandleTypeDef ,COMMAND_BQ275X);
 

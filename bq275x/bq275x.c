@@ -11,7 +11,7 @@
 I2C_HandleTypeDef hi2c1;
 
 
-uint8_t BQ275x_init(I2C_HandleTypeDef i2c) //+++
+uint8_t BQ275x_init(I2C_HandleTypeDef i2c, uint16_t battery_capacity) //+++
 {
 
 
